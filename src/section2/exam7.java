@@ -1,18 +1,22 @@
-package exam;
+package section2;
 
 import java.util.Scanner;
 
-public class exam7_answer {
+public class exam7 {
 
     private static String solution(String str) {
         String answer = "YES";
 
         String upStr = str.toUpperCase();
         char[] charArray = upStr.toCharArray();
-        int length = charArray.length;
+        int lt = 0;
+        int gt = charArray.length-1;
 
-        for (int i=0; i < length/2; i++) {
-            if (charArray[i] != charArray[length-i-1]) {
+        while (lt < gt) {
+            if (charArray[lt] == charArray[gt]) {
+                lt++;
+                gt--;
+            } else {
                 answer = "NO";
                 break;
             }

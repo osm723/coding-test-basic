@@ -1,20 +1,21 @@
-package exam;
+package section2;
 
 import java.util.Scanner;
 
-public class exam9 {
+public class exam9_answer {
 
     private static int solution(String str) {
-        int answer = 0;
+        String answer = "";
 
         char[] charArray = str.toCharArray();
+
         for (char t: charArray) {
-            if (t >= 48 && t <= 57) {
-                answer = 10 * answer + Integer.parseInt(String.valueOf(t));
+            if (Character.isDigit(t)) {
+                answer += t;
             }
         }
 
-        return answer;
+        return Integer.parseInt(answer);
     }
 
     public static void main(String[] args){
@@ -23,5 +24,6 @@ public class exam9 {
 
         System.out.println(solution(input));
     }
+
 
 }

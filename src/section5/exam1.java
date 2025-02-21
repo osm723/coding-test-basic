@@ -9,18 +9,12 @@ public class exam1 {
     private static String solution(int length, String vote) {
         String answer = "";
         int max = 0;
-
         char[] array = vote.toCharArray();
         Map<String,Integer> map = new HashMap<>();
-        map.put("A", 0);
-        map.put("B", 0);
-        map.put("C", 0);
-        map.put("D", 0);
-        map.put("E", 0);
 
         for (int i = 0; i < array.length; i++) {
             String ch = String.valueOf(array[i]);
-            Integer i1 = map.get(ch);
+            Integer i1 = map.getOrDefault(ch, 0);
             map.put(ch,++i1);
         }
 

@@ -7,6 +7,9 @@ public class exam7 {
     static int[][] arr;
 
     private static int DFS(int n, int r) {
+        if (arr[n][r] != 0) {
+            return arr[n][r];
+        }
 
         if (r == 0) {
             return arr[n][r] = 1;

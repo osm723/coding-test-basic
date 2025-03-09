@@ -15,10 +15,8 @@ public class exam3 {
             return;
         }
 
-        maxScore = Math.max(maxScore, sumScore);
-
         if (L == examCnt) {
-            return;
+            maxScore = Math.max(maxScore, sumScore);
         } else {
             DFS(L+1, sumScore+scoreArr[L+1], sumTime+timeArr[L+1]);
             DFS(L+1, sumScore, sumTime);

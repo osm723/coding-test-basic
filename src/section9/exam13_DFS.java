@@ -2,7 +2,7 @@ package section9;
 
 import java.util.Scanner;
 
-public class exam13 {
+public class exam13_DFS {
 
     static int[][] arr;
     static int[][] range = {{1,0},{1,1},{1,-1},{-1,0},{-1,1},{-1,-1},{0,1},{0,-1}};
@@ -39,6 +39,7 @@ public class exam13 {
         for (int i=0; i < len; i++) {
             for (int j=0; j < len; j++) {
                 if (arr[i][j] == 1) {
+                    arr[i][j] = 0;
                     DFS(i, j);
                     answer++;
                 }

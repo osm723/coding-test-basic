@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class exam_answer {
+public class exam3_answer {
 
     private static void solution(int len, List<Time2> times) {
         int max = 0;
